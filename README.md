@@ -1,66 +1,55 @@
-# Spotify Mini Player 🎵
+# Now Playing
 
-A sleek, lightweight, always-on-top desktop controller for Spotify on Windows.
+Now Playing is an always on top desktop mini player for Spotify. It eliminates distracting context switches by letting you control your music without hunting for the main app or browser tabs.
 
-> [!IMPORTANT]
-> **Spotify Premium Required**: Controlling playback (play, pause, skip, seek, volume) via Spotify's Web API requires an active **Spotify Premium** account.
 
----
+> [!NOTE]
+> **Spotify Premium is required** for playback controls through the Spotify Web API.
 
 ## ✨ Features
 
-- **Always-on-Top Floating Widget**: Stays visible over all full-screen apps and browsers.
-- **Dual View Modes**:
-  - **Compact Bar**: Ultra-slim widget designed for the taskbar or screen corner.
-  - **Full Card**: Album art, track info, progress/seeking, volume, and playback controls.
-- **Persistent Session**: Authorize once; login is saved across app restarts.
-- **Real-time Sync**: Instant sync with playback from your desktop or phone Spotify app.
-
----
+* Always-on-top floating player
+* Compact and full views
+* Play, pause, next and previous
+* Seek and volume controls
+* Album artwork and track info
+* Syncs with Spotify playback
+* Remembers your login
 
 ## 🚀 Quick Start
 
-1. Download / unzip the application folder.
-2. Launch **`Spotify Mini Player.exe`**.
-3. Click **"Connect to Spotify"** and log in via your browser.
-4. Play music on Spotify — the player will automatically sync!
+1. Download and unzip the app.
+2. Open **`Spotify Mini Player.exe`**.
+3. Click **Connect to Spotify**.
+4. Log in and start listening.
 
----
+## 🛠️ Run From Source
 
-## 🛠️ Setup from Source
+**Prerequisites**
 
-### Prerequisites
-- [Node.js](https://nodejs.org/) (v18+)
-- Active **Spotify Premium** account
-- Spotify Developer App (Client ID)
+* Node.js 18+
+* Spotify Premium
+* Spotify Developer App
 
-### 1. Spotify Developer Settings
-1. Go to [Spotify Developer Dashboard](https://developer.spotify.com/dashboard) and create an app.
-2. Under **Settings**, add Redirect URI: `http://127.0.0.1:8888/callback`
-3. Under **User Management**, add your Spotify account email.
-
-### 2. Configure & Run
 ```bash
-# Clone & install dependencies
-git clone <repo-url>
-cd spotify-mini-player
+git clone https://github.com/Aneesh004/Now-Playing.git
+cd Now-Playing
 npm install
-
-# Create .env file
-# VITE_SPOTIFY_CLIENT_ID=your_client_id_here
-# VITE_REDIRECT_URI=http://127.0.0.1:8888/callback
-
-# Run locally
 npm run dev
 
-# Build standalone .exe
-npm run dist:win
 ```
 
----
+To build the Windows app:
 
-## 💡 Controls & Tips
+```bash
+npm run dist:win
 
-- **Drag & Move**: Click and drag anywhere on the player to reposition it.
-- **Toggle Mode**: Click the **collapse/expand** icon in the header to switch between Compact and Full card views.
-- **Exit**: Click the **✕** button to close the app completely.
+```
+
+## 💡 Controls
+
+* **Drag** to move the player.
+* **Collapse / Expand** to switch views.
+* **✕** to exit.
+
+**Because the music shouldn't need a tab.**
