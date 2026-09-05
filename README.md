@@ -1,10 +1,14 @@
 # Now Playing
 
-**Why Does This Exist?**
+Why Does This Exist?
 
-The problem is simple: every time you want to skip a song or pause music, you have to Alt-Tab to Spotify, do the thing, then Alt-Tab back. This breaks the flow.
+The problem is simple. Every time you want to skip a song or pause music, you have to Alt-Tab to Spotify, do the thing, then Alt-Tab back. It breaks the flow.
 
-This app solves that by giving you a tiny floating widget that stays visible on top of everything, even full-screen apps, so you never have to leave what you're doing.
+
+Spotify has a mini-player. It exists. It works but, we can do better.
+
+
+This app solves that by giving you a tiny floating widget that stays visible on top of everything, even full-screen apps, so you never have to leave what you're doing.  
 
 > [!NOTE]
 > **Spotify Premium is required** for playback controls through the Spotify Web API.
