@@ -1,0 +1,44 @@
+{
+  "name": "spotify-mini-player",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A compact always-on-top Spotify controller",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "concurrently -k \"vite\" \"wait-on http://localhost:5173 && cross-env NODE_ENV=development electron .\"",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "cross-env NODE_ENV=production electron .",
+    "dist:win": "node kill-app.js && npm run build && electron-builder --win && node create-shortcut.js"
+  },
+  "build": {
+    "appId": "com.spotify-mini-player.app",
+    "productName": "Spotify Mini Player",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "win": {
+      "signAndEditExecutable": false,
+      "target": "dir"
+    }
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
+    "cross-env": "^7.0.3",
+    "electron": "^33.3.1",
+    "electron-builder": "^25.1.8",
+    "vite": "^6.0.7",
+    "wait-on": "^8.0.3"
+  }
+}
